@@ -4,6 +4,8 @@
 
 A **browser-only, zero-dependency** collage maker built from four static files (`index.html`, `styles.css`, `app.js`, `i18n.js`). Open `index.html` to run — no install, no build, no upload. Images never leave your device.
 
+**Try it:** [https://collage.stevenpub.com](https://collage.stevenpub.com)
+
 ![Interface preview](docs/images/preview-en.png)
 
 ## Examples

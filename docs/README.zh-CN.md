@@ -4,6 +4,8 @@
 
 一个**纯前端、零依赖**的拼图工具，由四个静态文件组成（`index.html`、`styles.css`、`app.js`、`i18n.js`）。双击 `index.html` 即可使用，无需安装、无需构建，图片不会离开你的设备。
 
+**在线体验：** [https://collage.stevenpub.com](https://collage.stevenpub.com)
+
 ![界面预览](images/preview-zh-CN.png)
 
 ## 效果示例
