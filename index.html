@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#0a0a0c" />
+<title>拼图工坊 · 纯前端拼图工具</title>
+<meta name="description" content="纯前端本地拼图工具：九宫格、左右拼接、上下拼接，间距、外框、圆角、背景色自由调节，支持 1:1 / 16:9 / 9:16 / 4:3 / 3:4 画布比例，图片仅本地处理、零上传。" />
+<meta name="keywords" content="拼图,拼图工具,九宫格拼图,照片拼图,在线拼图,图片拼接,左右拼接,上下拼接,本地拼图,collage,collage maker,photo collage" />
+<meta name="robots" content="index, follow" />
+<meta name="author" content="Collage Studio" />
+<meta name="application-name" content="拼图工坊" />
+<meta name="apple-mobile-web-app-title" content="拼图工坊" />
+
+<!-- 多语言介绍：供搜索引擎抓取，同时用于浏览器语言自动选择与运行时切换 -->
+<meta name="description" lang="zh-CN" content="纯前端本地拼图工具：九宫格、左右拼接、上下拼接，间距、外框、圆角、背景色自由调节，支持 1:1 / 16:9 / 9:16 / 4:3 / 3:4 画布比例，图片仅本地处理、零上传。" />
+<meta name="description" lang="en" content="Browser-only collage maker: smart 3×3 grid, side-by-side and stacked strips with adjustable gap, frame, radius and background, plus 1:1 / 16:9 / 9:16 / 4:3 / 3:4 canvas ratios. Images are processed locally and never uploaded." />
+<meta name="description" lang="ja" content="ブラウザだけで動くローカルなコラージュ作成ツール。3×3 グリッド、横並び、縦並びに対応し、間隔・外枠・角丸・背景色を自由に調整。1:1 / 16:9 / 9:16 / 4:3 / 3:4 のキャンバス比率に対応し、画像は端末内だけで処理されます。" />
+<meta name="description" lang="ko" content="브라우저에서만 동작하는 로컬 콜라주 도구입니다. 3×3 그리드, 가로 배치, 세로 배치와 간격·외곽·모서리·배경색 조절, 1:1 / 16:9 / 9:16 / 4:3 / 3:4 캔버스 비율을 지원하며 이미지는 기기에서만 처리됩니다." />
+<meta name="description" lang="es" content="Herramienta de collage que funciona solo en el navegador: cuadrícula 3×3, tiras horizontales y verticales con espaciado, marco, esquinas y fondo ajustables, y proporciones 1:1 / 16:9 / 9:16 / 4:3 / 3:4. Las imágenes se procesan localmente y nunca se suben." />
+<meta name="description" lang="de" content="Collage-Tool, das komplett im Browser läuft: 3×3-Raster, horizontale und vertikale Streifen mit einstellbarem Abstand, Rahmen, Ecken und Hintergrund sowie Formate 1:1 / 16:9 / 9:16 / 4:3 / 3:4. Bilder werden nur lokal verarbeitet und nicht hochgeladen." />
+<meta name="description" lang="fr" content="Outil de collage 100 % navigateur : grille 3×3, bandeaux horizontaux et verticaux avec espacement, cadre, arrondis et fond réglables, et formats 1:1 / 16:9 / 9:16 / 4:3 / 3:4. Les images sont traitées localement, sans envoi." />
+
+<meta name="keywords" lang="en" content="collage maker, photo collage, grid collage, picture collage, photo grid, side by side photos, stacked photos, local collage" />
+<meta name="keywords" lang="ja" content="コラージュ,フォトコラージュ,グリッド写真,画像結合,写真を並べる,ローカル処理" />
+<meta name="keywords" lang="ko" content="콜라주,사진 콜라주,그리드 사진,사진 합치기,사진 붙이기,로컬 처리" />
+<meta name="keywords" lang="es" content="collage,crear collage,collage de fotos,cuadrícula de fotos,unir fotos,collage sin subir" />
+<meta name="keywords" lang="de" content="Collage,Collage erstellen,Fotocollage,Bilderraster,Fotos zusammenfügen,lokal" />
+<meta name="keywords" lang="fr" content="collage,créer un collage,collage photo,grille photo,assembler des photos,sans envoi" />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="拼图工坊 · Collage Studio" />
+<meta property="og:title" content="拼图工坊 · 纯前端拼图工具" />
+<meta property="og:description" content="纯前端本地拼图工具：九宫格、左右拼接、上下拼接，间距、外框、圆角、背景色自由调节，支持 1:1 / 16:9 / 9:16 / 4:3 / 3:4 画布比例，图片仅本地处理、零上传。" />
+<meta property="og:locale" content="zh_CN" />
+<meta property="og:locale:alternate" content="en_US" />
+<meta property="og:locale:alternate" content="ja_JP" />
+<meta property="og:locale:alternate" content="ko_KR" />
+<meta property="og:locale:alternate" content="es_ES" />
+<meta property="og:locale:alternate" content="de_DE" />
+<meta property="og:locale:alternate" content="fr_FR" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="拼图工坊 · 纯前端拼图工具" />
+<meta name="twitter:description" content="纯前端本地拼图工具：九宫格、左右拼接、上下拼接，参数自由调节，支持多种画布比例，图片仅本地处理。" />
+<meta name="twitter:image" content="preview.png" />
+<meta property="og:image" content="preview.png" />
+<meta property="og:image:alt" content="拼图工坊界面：九宫格拼图预览与右侧参数面板 / Collage Studio interface with grid collage preview and settings panel" />
+<link rel="alternate" hreflang="zh-CN" href="./index.html" />
+<link rel="alternate" hreflang="en" href="./index.html" />
+<link rel="alternate" hreflang="ja" href="./index.html" />
+<link rel="alternate" hreflang="ko" href="./index.html" />
+<link rel="alternate" hreflang="es" href="./index.html" />
+<link rel="alternate" hreflang="de" href="./index.html" />
+<link rel="alternate" hreflang="fr" href="./index.html" />
+<link rel="alternate" hreflang="x-default" href="./index.html" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%23d8ff5f'/%3E%3Crect x='5' y='5' width='6' height='6' rx='1.6' fill='%23101305'/%3E%3Crect x='13' y='5' width='6' height='6' rx='1.6' fill='%23101305'/%3E%3Crect x='5' y='13' width='6' height='6' rx='1.6' fill='%23101305'/%3E%3Crect x='13' y='13' width='6' height='6' rx='1.6' fill='%23101305'/%3E%3C/svg%3E" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="app">
+  <header class="topbar">
+    <div class="brand">
+      <span class="logo" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <rect x="3" y="3" width="8" height="8" rx="2.2"/>
+          <rect x="13" y="3" width="8" height="8" rx="2.2" opacity=".55"/>
+          <rect x="3" y="13" width="8" height="8" rx="2.2" opacity=".55"/>
+          <rect x="13" y="13" width="8" height="8" rx="2.2"/>
+        </svg>
+      </span>
+      <div>
+        <h1 data-i18n="brand">拼图工坊</h1>
+        <p>Collage Studio</p>
+      </div>
+    </div>
+    <div class="topbar-right">
+      <label class="lang-select" title="Language">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="8.6"/>
+          <path d="M3.6 12h16.8"/>
+          <path d="M12 3.4c2.4 2.3 3.7 5.3 3.7 8.6s-1.3 6.3-3.7 8.6c-2.4-2.3-3.7-5.3-3.7-8.6S9.6 5.7 12 3.4Z"/>
+        </svg>
+        <select id="langSelect" data-i18n-aria="langAria" aria-label="语言"></select>
+      </label>
+      <div class="privacy">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="4.5" y="10" width="15" height="10.5" rx="2.6"/>
+          <path d="M8.2 10V7.6a3.8 3.8 0 0 1 7.6 0V10"/>
+        </svg>
+        <span class="label" data-i18n="privacy">图片仅本地处理 · 零上传</span>
+        <span class="dot" aria-hidden="true"></span>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="stage-panel" aria-label="拼图预览" data-i18n-aria="stagePreview">
+      <div class="stage" id="stage">
+        <div class="empty" id="emptyState" role="button" tabindex="0" aria-label="选择本地图片开始拼图" data-i18n-aria="emptyAria">
+          <span class="empty-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4.5" width="18" height="15" rx="3"/>
+              <circle cx="8.4" cy="9.6" r="1.4"/>
+              <path d="m4.4 16.8 4.6-4.6a2 2 0 0 1 2.8 0l6.8 6.8"/>
+              <path d="M18.6 2.2v4.6M16.3 4.5h4.6"/>
+            </svg>
+          </span>
+          <h2 data-i18n="emptyTitle">把照片拖进来，开始拼图</h2>
+          <p><span data-i18n="emptyBody">选择本地图片，最多 9 张</span><br><span data-i18n="emptyBody2">支持拖拽、点击选择或 Ctrl + V 粘贴</span></p>
+          <span class="btn-soft" data-i18n="emptyCta">选择图片</span>
+        </div>
+
+        <canvas id="canvas" class="canvas" hidden></canvas>
+        <div class="cell-handles" id="cellHandles" hidden></div>
+
+        <div class="stage-drop" aria-hidden="true" data-i18n="dropOverlay">松开鼠标，添加图片</div>
+      </div>
+
+      <div class="stage-foot">
+        <span class="info" id="stageInfo" data-i18n="stageWaiting">等待添加图片</span>
+        <div class="stage-foot-right">
+          <span class="alt-sort-hint"><kbd>Alt</kbd><span data-i18n="sortHintTail"> + 拖动 · 或把手排序</span></span>
+          <span class="touch-sort-hint" data-i18n="touchSortHint">轻点画布显示把手后拖动</span>
+          <span class="tag" data-i18n="footTag">纯前端渲染 · 不上传</span>
+        </div>
+      </div>
+    </section>
+
+    <aside class="sidebar">
+      <div class="sidebar-scroll">
+      <section class="card">
+        <div class="card-head">
+          <span class="card-title"><em>01</em><span data-i18n="cardImages">图片</span></span>
+          <span class="count-pill" id="countPill">0 / 9</span>
+        </div>
+        <div class="dropzone" id="dropzone" role="button" tabindex="0" aria-label="选择或拖入图片" data-i18n-aria="dropAria">
+          <span class="drop-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 16V4"/><path d="m7.5 8.5 4.5-4.5 4.5 4.5"/>
+              <path d="M4.5 15v3.2a1.8 1.8 0 0 0 1.8 1.8h11.4a1.8 1.8 0 0 0 1.8-1.8V15"/>
+            </svg>
+          </span>
+          <span class="drop-copy">
+            <strong data-i18n="dropTitle">选择或拖入图片</strong>
+            <small data-i18n="dropSub">JPG · PNG · WebP · 最多 9 张</small>
+          </span>
+        </div>
+        <input type="file" id="fileInput" accept="image/*" multiple hidden />
+        <div class="thumbs" id="thumbs"></div>
+        <p class="hint" id="uploadHint" data-i18n="uploadHint">按添加顺序排列 · 支持 Ctrl / ⌘ + V 粘贴截图</p>
+      </section>
+
+      <section class="card">
+        <div class="card-head">
+          <span class="card-title"><em>02</em><span data-i18n="cardLayout">版式</span></span>
+          <span class="mini-note" id="layoutNote">—</span>
+        </div>
+
+        <div class="segmented" role="group" aria-label="拼图模式" data-i18n-aria="modeGroupAria">
+          <button class="seg-btn active" data-mode="grid" type="button" aria-pressed="true">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="3" y="3" width="5.2" height="5.2" rx="1.3"/><rect x="9.4" y="3" width="5.2" height="5.2" rx="1.3"/><rect x="15.8" y="3" width="5.2" height="5.2" rx="1.3"/>
+              <rect x="3" y="9.4" width="5.2" height="5.2" rx="1.3"/><rect x="9.4" y="9.4" width="5.2" height="5.2" rx="1.3"/><rect x="15.8" y="9.4" width="5.2" height="5.2" rx="1.3"/>
+              <rect x="3" y="15.8" width="5.2" height="5.2" rx="1.3"/><rect x="9.4" y="15.8" width="5.2" height="5.2" rx="1.3"/><rect x="15.8" y="15.8" width="5.2" height="5.2" rx="1.3"/>
+            </svg>
+            <span data-i18n="modeGrid">九宫格</span>
+          </button>
+          <button class="seg-btn" data-mode="h" type="button" aria-pressed="false">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="3" y="4" width="5" height="16" rx="1.5"/>
+              <rect x="9.5" y="4" width="5" height="16" rx="1.5"/>
+              <rect x="16" y="4" width="5" height="16" rx="1.5"/>
+            </svg>
+            <span data-i18n="modeH">左右拼接</span>
+          </button>
+          <button class="seg-btn" data-mode="v" type="button" aria-pressed="false">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="4" y="3" width="16" height="5" rx="1.5"/>
+              <rect x="4" y="9.5" width="16" height="5" rx="1.5"/>
+              <rect x="4" y="16" width="16" height="5" rx="1.5"/>
+            </svg>
+            <span data-i18n="modeV">上下拼接</span>
+          </button>
+        </div>
+
+        <div class="ctl" id="ratioRow">
+          <div class="ctl-top">
+            <span data-i18n="ratio">画布比例</span>
+            <span class="mini-note" id="ratioHint">1 : 1</span>
+          </div>
+          <div class="ratio-chips" id="ratioChips" role="group" aria-label="画布比例" data-i18n-aria="ratioGroupAria">
+            <button class="ratio-chip active" data-ratio="1:1" type="button" aria-pressed="true" aria-label="1:1 方形" title="1:1 方形">1:1</button>
+            <button class="ratio-chip" data-ratio="16:9" type="button" aria-pressed="false" aria-label="16:9 横版" title="16:9 横版">16:9</button>
+            <button class="ratio-chip" data-ratio="9:16" type="button" aria-pressed="false" aria-label="9:16 竖版" title="9:16 竖版">9:16</button>
+            <button class="ratio-chip" data-ratio="4:3" type="button" aria-pressed="false" aria-label="4:3 横版" title="4:3 横版">4:3</button>
+            <button class="ratio-chip" data-ratio="3:4" type="button" aria-pressed="false" aria-label="3:4 竖版" title="3:4 竖版">3:4</button>
+          </div>
+        </div>
+
+        <div class="ctl" id="variantRow" title="0 = 自动最佳；1–5 = 按评分排序的其他布局候选；拖动排序不会改变当前布局" data-i18n-title="variantTitle">
+          <div class="ctl-top">
+            <label for="variantRange" data-i18n="variant">布局选择</label>
+            <span class="mini-note" id="variantHint">自动最佳</span>
+          </div>
+          <input type="range" id="variantRange" min="0" max="5" step="1" value="0" aria-label="布局选择" />
+          <div class="range-ends">
+            <span data-i18n="variantAuto">自动最佳</span>
+            <span id="variantEnd">布局 5</span>
+          </div>
+        </div>
+
+        <div class="ctl-pair">
+          <div class="ctl">
+            <div class="ctl-top">
+              <label for="gapRange" data-i18n="gap">图片间距</label>
+              <label class="num-field" for="gapNum" title="图片之间的间距；以 2048 px 长边为基准，导出时等比缩放" data-i18n-title="gapTitle">
+                <input type="number" id="gapNum" min="0" max="120" step="1" value="10" inputmode="numeric" aria-label="图片间距，单位像素" data-i18n-aria="gapAria" />
+                <span class="unit">px</span>
+              </label>
+            </div>
+            <input type="range" id="gapRange" min="0" max="120" step="1" value="10" />
+          </div>
+
+          <div class="ctl">
+            <div class="ctl-top">
+              <label for="borderRange" data-i18n="border">外框边距</label>
+              <label class="num-field" for="borderNum" title="拼图外框到图片之间的留白；以 2048 px 长边为基准，导出时等比缩放" data-i18n-title="borderTitle">
+                <input type="number" id="borderNum" min="0" max="160" step="1" value="16" inputmode="numeric" aria-label="外框边距，单位像素" data-i18n-aria="borderAria" />
+                <span class="unit">px</span>
+              </label>
+            </div>
+            <input type="range" id="borderRange" min="0" max="160" step="1" value="16" />
+          </div>
+        </div>
+
+        <div class="ctl-pair">
+          <div class="ctl">
+            <div class="ctl-top">
+              <label for="radiusRange" data-i18n="radius">图片圆角</label>
+              <label class="num-field" for="radiusNum" title="每张图片的圆角；以 2048 px 长边为基准，导出时等比缩放" data-i18n-title="radiusTitle">
+                <input type="number" id="radiusNum" min="0" max="120" step="1" value="0" inputmode="numeric" aria-label="图片圆角，单位像素" data-i18n-aria="radiusAria" />
+                <span class="unit">px</span>
+              </label>
+            </div>
+            <input type="range" id="radiusRange" min="0" max="120" step="1" value="0" />
+          </div>
+
+          <div class="ctl">
+            <div class="ctl-top">
+              <label for="outerRadiusRange" data-i18n="outerRadius">外框圆角</label>
+              <label class="num-field" for="outerRadiusNum" title="整个拼图外框的圆角；以 2048 px 长边为基准，导出时等比缩放" data-i18n-title="outerRadiusTitle">
+                <input type="number" id="outerRadiusNum" min="0" max="240" step="1" value="0" inputmode="numeric" aria-label="外框圆角，单位像素" data-i18n-aria="outerRadiusAria" />
+                <span class="unit">px</span>
+              </label>
+            </div>
+            <input type="range" id="outerRadiusRange" min="0" max="240" step="1" value="0" />
+          </div>
+        </div>
+
+        <div class="ctl" id="fitRow" title="裁剪填满时：鼠标直接拖动，触屏长按后再拖动；双击复位" data-i18n-title="fitTitle">
+          <div class="ctl-top"><span data-i18n="fit">九宫格适配</span><span class="mini-note" id="fitHint">鼠标拖动 · 双击复位</span></div>
+          <div class="chips" id="fitChips">
+            <button class="chip active" data-fit="cover" type="button" data-i18n="fitCover">裁剪填满</button>
+            <button class="chip" data-fit="contain" type="button" data-i18n="fitContain">完整显示</button>
+          </div>
+        </div>
+      </section>
+
+      <div class="sidebar-foot">
+        <button type="button" id="resetBtn" data-i18n="reset">恢复默认参数</button>
+        <span class="sep" aria-hidden="true">·</span>
+        <button type="button" id="clearBtn" data-i18n="clear">清空全部图片</button>
+      </div>
+      </div>
+
+      <div class="export-dock">
+        <div class="dock-head">
+          <span data-i18n="dockTitle">背景与导出</span>
+          <span class="dock-dims" id="outDims">—</span>
+        </div>
+        <div class="dock-colors">
+          <div class="swatches" id="swatches" role="group" aria-label="背景颜色" data-i18n-aria="bgGroupAria"></div>
+          <label class="custom-color custom-color--mini" title="自定义背景颜色" data-i18n-title="customColorTitle">
+            <span class="custom-swatch-wrap">
+              <span class="custom-swatch" id="customSwatch"></span>
+              <input type="color" id="colorInput" value="#ffffff" aria-label="自定义背景颜色" data-i18n-aria="customColorTitle" />
+            </span>
+          </label>
+        </div>
+        <div class="dock-row">
+          <div class="select-wrap">
+            <select id="resSelect" aria-label="导出长边" data-i18n-aria="resAria">
+              <option value="1200">1200 · 聊天</option>
+              <option value="1600">1600 · 网页</option>
+              <option value="2048" selected>2048 · 推荐</option>
+              <option value="2560">2560 · 高清</option>
+              <option value="3072">3072 · 打印</option>
+              <option value="4096">4096 · 海报</option>
+            </select>
+          </div>
+          <button class="copy" id="copyBtn" type="button" title="复制 PNG 到剪贴板" data-i18n-title="copyTitle" disabled>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="11" height="11" rx="2.2"/>
+              <path d="M5.5 15H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v.5"/>
+            </svg>
+            <span data-i18n="copyBtn">复制拼图</span>
+          </button>
+          <button class="download" id="downloadBtn" type="button" title="下载 PNG 文件" data-i18n-title="downloadTitle" disabled>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 3.6v10.6"/><path d="m7.6 10 4.4 4.4 4.4-4.4"/>
+              <path d="M4.6 17.4v1.2a1.9 1.9 0 0 0 1.9 1.9h11a1.9 1.9 0 0 0 1.9-1.9v-1.2"/>
+            </svg>
+            <span data-i18n="downloadBtn">下载拼图</span>
+          </button>
+        </div>
+        <p class="dock-note"><span data-i18n="dockNoteBg">背景</span> <span id="bgVal">#FFFFFF</span> · <span data-i18n="dockNoteRest">参数按 2048 基准缩放 · PNG 无损</span></p>
+      </div>
+    </aside>
+  </main>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="i18n.js" defer></script>
+<script src="app.js" defer></script>
+</body>
+</html>
