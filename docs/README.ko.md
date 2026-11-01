@@ -1,6 +1,6 @@
 # 콜라주 스튜디오 · Collage Studio
 
-[English](../README.md) · [简体中文](README.zh-CN.md) · [日本語](README.ja.md) · **한국어** · [Español](README.es.md) · [Deutsch](README.de.md) · [Français](README.fr.md)
+[English](../README.md) · [简体中文](README.zh-CN.md) · [日本語](README.ja.md) · **한국어** · [Español](README.es.md) · [Deutsch](README.de.md) · [Français](README.fr.md) · [Português](README.pt.md) · [العربية](README.ar.md)
 
 **브라우저에서만 동작하는, 의존성 없는** 콜라주 도구입니다. `index.html`, `styles.css`, `app.js`, `i18n.js` 네 개의 정적 파일로 이루어져 있고, `index.html`을 열면 바로 사용할 수 있습니다. 설치와 빌드가 필요 없으며 이미지는 기기 밖으로 나가지 않습니다.
 

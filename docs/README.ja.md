@@ -1,6 +1,6 @@
 # コラージュ工房 · Collage Studio
 
-[English](../README.md) · [简体中文](README.zh-CN.md) · **日本語** · [한국어](README.ko.md) · [Español](README.es.md) · [Deutsch](README.de.md) · [Français](README.fr.md)
+[English](../README.md) · [简体中文](README.zh-CN.md) · **日本語** · [한국어](README.ko.md) · [Español](README.es.md) · [Deutsch](README.de.md) · [Français](README.fr.md) · [Português](README.pt.md) · [العربية](README.ar.md)
 
 **ブラウザだけで動く、依存ゼロ**のコラージュ作成ツール。`index.html`、`styles.css`、`app.js`、`i18n.js` の4つの静的ファイルで構成され、`index.html` を開くだけで使えます。インストールもビルドも不要で、画像が端末の外に出ることはありません。
 

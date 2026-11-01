@@ -1,6 +1,6 @@
 # Collage Studio
 
-[English](../README.md) · [简体中文](README.zh-CN.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Español](README.es.md) · [Deutsch](README.de.md) · **Français**
+[English](../README.md) · [简体中文](README.zh-CN.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Español](README.es.md) · [Deutsch](README.de.md) · **Français** · [Português](README.pt.md) · [العربية](README.ar.md)
 
 Un outil de collage **100 % navigateur, sans dépendance**. Quatre fichiers statiques (`index.html`, `styles.css`, `app.js`, `i18n.js`) : ouvrez `index.html` et c’est parti, sans installation ni compilation. Vos images ne quittent jamais l’appareil.
 

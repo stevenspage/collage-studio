@@ -1,6 +1,6 @@
 # Collage Studio
 
-**English** · [简体中文](docs/README.zh-CN.md) · [日本語](docs/README.ja.md) · [한국어](docs/README.ko.md) · [Español](docs/README.es.md) · [Deutsch](docs/README.de.md) · [Français](docs/README.fr.md)
+**English** · [简体中文](docs/README.zh-CN.md) · [日本語](docs/README.ja.md) · [한국어](docs/README.ko.md) · [Español](docs/README.es.md) · [Deutsch](docs/README.de.md) · [Français](docs/README.fr.md) · [Português](docs/README.pt.md) · [العربية](docs/README.ar.md)
 
 A **browser-only, zero-dependency** collage maker built from four static files (`index.html`, `styles.css`, `app.js`, `i18n.js`). Open `index.html` to run — no install, no build, no upload. Images never leave your device.
 

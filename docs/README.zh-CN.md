@@ -1,6 +1,6 @@
 # 拼图工坊 · Collage Studio
 
-[English](../README.md) · **简体中文** · [日本語](README.ja.md) · [한국어](README.ko.md) · [Español](README.es.md) · [Deutsch](README.de.md) · [Français](README.fr.md)
+[English](../README.md) · **简体中文** · [日本語](README.ja.md) · [한국어](README.ko.md) · [Español](README.es.md) · [Deutsch](README.de.md) · [Français](README.fr.md) · [Português](README.pt.md) · [العربية](README.ar.md)
 
 一个**纯前端、零依赖**的拼图工具，由四个静态文件组成（`index.html`、`styles.css`、`app.js`、`i18n.js`）。双击 `index.html` 即可使用，无需安装、无需构建，图片不会离开你的设备。
 

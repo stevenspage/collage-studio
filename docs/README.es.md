@@ -1,6 +1,6 @@
 # Collage Studio
 
-[English](../README.md) · [简体中文](README.zh-CN.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · **Español** · [Deutsch](README.de.md) · [Français](README.fr.md)
+[English](../README.md) · [简体中文](README.zh-CN.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · **Español** · [Deutsch](README.de.md) · [Français](README.fr.md) · [Português](README.pt.md) · [العربية](README.ar.md)
 
 Un editor de collage **que funciona solo en el navegador y sin dependencias**. Son cuatro archivos estáticos (`index.html`, `styles.css`, `app.js`, `i18n.js`): abre `index.html` y listo, sin instalación ni compilación. Tus imágenes nunca salen del dispositivo.
 
