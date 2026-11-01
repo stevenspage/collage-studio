@@ -4,6 +4,8 @@
 
 Un editor de collage **que funciona solo en el navegador y sin dependencias**. Son cuatro archivos estáticos (`index.html`, `styles.css`, `app.js`, `i18n.js`): abre `index.html` y listo, sin instalación ni compilación. Tus imágenes nunca salen del dispositivo.
 
+**Probar en línea:** [https://collage.stevenpub.com](https://collage.stevenpub.com)
+
 ![Interfaz](images/preview-es.png)
 
 ## Ejemplos

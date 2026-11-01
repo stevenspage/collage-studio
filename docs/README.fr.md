@@ -4,6 +4,8 @@
 
 Un outil de collage **100 % navigateur, sans dépendance**. Quatre fichiers statiques (`index.html`, `styles.css`, `app.js`, `i18n.js`) : ouvrez `index.html` et c’est parti, sans installation ni compilation. Vos images ne quittent jamais l’appareil.
 
+**Essayer en ligne :** [https://collage.stevenpub.com](https://collage.stevenpub.com)
+
 ![Interface](images/preview-fr.png)
 
 ## Exemples

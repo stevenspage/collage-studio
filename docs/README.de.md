@@ -4,6 +4,8 @@
 
 Ein **reines Browser-Tool ohne Abhängigkeiten** zum Erstellen von Collagen. Vier statische Dateien (`index.html`, `styles.css`, `app.js`, `i18n.js`) — `index.html` öffnen und loslegen, ohne Installation und ohne Build. Bilder verlassen das Gerät nie.
 
+**Online testen:** [https://collage.stevenpub.com](https://collage.stevenpub.com)
+
 ![Oberfläche](images/preview-de.png)
 
 ## Beispiele

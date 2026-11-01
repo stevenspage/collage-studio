@@ -4,6 +4,8 @@
 
 **브라우저에서만 동작하는, 의존성 없는** 콜라주 도구입니다. `index.html`, `styles.css`, `app.js`, `i18n.js` 네 개의 정적 파일로 이루어져 있고, `index.html`을 열면 바로 사용할 수 있습니다. 설치와 빌드가 필요 없으며 이미지는 기기 밖으로 나가지 않습니다.
 
+**온라인 체험:** [https://collage.stevenpub.com](https://collage.stevenpub.com)
+
 ![인터페이스](images/preview-ko.png)
 
 ## 예시

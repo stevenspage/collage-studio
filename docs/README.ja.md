@@ -4,6 +4,8 @@
 
 **ブラウザだけで動く、依存ゼロ**のコラージュ作成ツール。`index.html`、`styles.css`、`app.js`、`i18n.js` の4つの静的ファイルで構成され、`index.html` を開くだけで使えます。インストールもビルドも不要で、画像が端末の外に出ることはありません。
 
+**オンラインで試す：** [https://collage.stevenpub.com](https://collage.stevenpub.com)
+
 ![インターフェース](images/preview-ja.png)
 
 ## 作例
